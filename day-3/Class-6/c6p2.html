@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<body>
+    <h1>amader sathe contact korun</h1>
+    <p>nijer form puron korun, amara 24 hours moddhe response dibo</p>
+
+    <form action="/contact" method="post">
+        <fieldset>
+            <legend> Apnar information </legend>
+            <p>
+                <label for="name">Full name :</label>
+                <br>
+                <input type="text" id="name" name="name" required minlength="3" placeholder="John Doe" />
+            </p>
+
+            <p>
+                <label for="email">Email :</label><br />
+                <input type="email" id="email" name="email" required placeholder="you@example.com" />
+            </p>
+
+            <p>
+                <label for="phone">Phone:</label>
+                <br>
+                <input type="tel" id="phone" name="phone" pattern="[0-9] {11}" placeholder="01700000000" />
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Message</legend>
+            <p>
+                <label for="subject">Subject:</label>
+                <br>
+                <select id="subject" name="subject" required>
+                    <option value=""> -- Subject select korun -- </option>
+                    <option value="general"> Normal Question </option>
+                    <option value="support"> Technical Support </option>
+                    <option value="feedback"> Feedback </option>
+                </select>
+            </p>
+            <p>
+                <label for="msg"> Apnar message * </label>
+                <br>
+                <textarea id="msg" name="msg" rows="5" cols="40" required minlength="10"></textarea>
+            </p>
+        </fieldset>
+
+        <button type="submit"> Pathan </button>
+        <button type="reset"> Clear </button>
+    </form>
+</body>
+</html>
