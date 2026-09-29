@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1> New account Khula </h1>
+    <form action="/register" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend> Personal Info </legend>
+
+            <p>
+                <label for="name"> full name </label>
+                <br>
+                <input type="text" id="name" name="name" required minlength="3" />
+            </p>
+
+            <p>
+                <label for="email"> Email *</label>
+                <br>
+                <input type="email" id="email" name="email" required />
+            </p>
+
+            <p>
+                <label for="phone"> Phone *</label><br />
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{11}" />
+            </p>
+
+            <p>
+                <label for="password"> Password *</label><br />
+                <input type="password" id="password" name="password" required minlength="6" />
+            </p>
+
+            <p>
+                <label for="dob"> Birthday: </label>
+                <br>
+                <input type="date" id="dob" name="dob" />
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend> Name </legend>
+
+            <p>
+                Gender:
+                <br>
+
+                <input type="radio" id="m" name="gender" value="male" />
+                <label for="m"> Male </label>
+
+                <input type="radio" id="f" name="gender" value="female" />
+                <label for="f"> Female</label>
+            </p>
+
+            <p>
+                <label for="city"> City: </label>
+                <br>
+
+                <select id="city" name="city">
+                    <option value=""> -- City Select -- </option>
+                    <option value="dhaka"> Dhaka </option>
+                    <option value="ctg"> Chattogram  </option>
+                    <option value="syl"> Sylhet </option>
+                </select>
+            </p>
+
+            <p>
+                Hobby:
+                <br>
+
+                <input type="checkbox" id="h1" name="hobby" value="reading" />
+                <label for="h1"> Book pora </label>
+
+                <input type="checkbox" id="h2" name="hobby" value="coding" />
+                <label for="h2"> Coding </label>
+
+                <input type="checkbox" id="h3" name="hobby" value="travel" />
+                <label for="h3"> travel </label>
+            </p>
+
+            <p>
+                <label for="pic"> Profile Photo: </label>
+                <br>
+                <input type="file" id="pic" name="pic" accept="image/*" />
+            </p>
+
+            <p>
+                <label for="exp"> Experience (years): </label>
+                <br>
+                <input type="range" id="exp" name="exp" min="0" max="20" value="1" />
+            </p>
+
+            <p>
+                <label for="color"> Favorite Color: </label>
+                <input type="color" id="color" name="color" />
+            </p>
+
+            <p>
+                <label for="about"> Nijer shomporke: </label>
+                <br>
+                <textarea id="about" name="about" rows="4" cols="40"></textarea>
+            </p>
+
+            <p>
+                <input type="checkbox" id="tos" required />
+                <label for="tos"> ami rules mani </label>
+            </p>
+        </fieldset>
+
+        <button type="submit">Register</button>
+        <button type="reset">Clear</button>
+
+    </form>
+</body>
+</html>
