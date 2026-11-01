@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="utf-8" />
+    <title>Trendy - Fashion Store</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav><b>Trendy</b><span>Winter Sale - 10% off</span></nav>
+      <h1>Notun Collection</h1>
+      <p>Shirt, Pants, Shoes - Sob Ek Jaygay!</p>
+    </header>
+
+    <section class="filters">
+      <button data-f="all" class="f active">All</button>
+      <button data-f="shirt" class="f">Shirts</button>
+      <button data-f="pants" class="f">Pants</button>
+      <button data-f="shoes" class="f">Shoes</button>
+      <label class="in-stock"
+        ><input id="stock" type="checkbox" checked /> In-stock only</label
+      >
+    </section>
+
+    <main id="grid" class="grid"></main>
+
+    <aside class="summary">
+      <div>Items: <b id="count">0</b></div>
+      <div>Discounted total: <b id="total">৳0</b></div>
+    </aside>
+
+    <footer>© Trendy 2026</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
