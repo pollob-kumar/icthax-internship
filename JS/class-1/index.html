@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="utf-8" />
+    <title>QuickCalc - Simple Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav><b>QuickCalc</b><a href="#calc">Try it</a></nav>
+      <h1>Druto Hisab - Jekono Somoy</h1>
+      <p>+ - x ÷ - Sathe Sathe Result Pao</p>
+    </header>
+    <section id="calc" class="card">
+      <div class="row">
+        <input id="a" type="number" placeholder="First number" />
+        <select id="op">
+          <option>+</option>
+          <option>-</option>
+          <option>*</option>
+          <option>/</option>
+        </select>
+        <input id="b" type="number" placeholder="Second number" />
+      </div>
+      <button id="go">Calculate</button>
+      <div id="out" class="out">= 0</div>
+    </section>
+    <section class="features">
+      <div>
+        <h3>Fast</h3>
+        <p>Instant result</p>
+      </div>
+      <div>
+        <h3>Simple</h3>
+        <p>No signup</p>
+      </div>
+      <div>
+        <h3>Free</h3>
+        <p>Forever free</p>
+      </div>
+    </section>
+    <footer>© QuickCalc 2026</footer>
+    <script src="script.js"></script>
+  </body>
+</html>

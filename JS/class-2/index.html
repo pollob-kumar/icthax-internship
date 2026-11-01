@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="utf-8" />
+    <title>Grade Calculator - Rahim Coaching</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav>
+        <span class="logo">Rahim Coaching</span><a href="#calc">Calculator</a>
+      </nav>
+      <h1>Tomar Grade - Ek click e</h1>
+      <p>SSC / HSC marks boshiye sathe sathe jano kon grade pabe</p>
+    </header>
+
+    <section id="calc" class="card">
+      <h2>Marks Dao</h2>
+      <input id="mark" type="number" min="0" max="100" placeholder="0 - 100" />
+      <button id="btn">Grade Dekhao</button>
+      <div id="out" class="result"></div>
+    </section>
+
+    <section class="tips">
+      <h2>Grade Chart</h2>
+      <ul>
+        <li>80+ → A+</li>
+        <li>70-79 → A</li>
+        <li>60-69 → B</li>
+        <li>50-59 → C</li>
+        <li>33-49 → D</li>
+        <li>1-32 → F</li>
+      </ul>
+    </section>
+
+    <footer>© Rahim Coaching 2026</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
