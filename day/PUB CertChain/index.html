@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PUB CertChain</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;600;800&family=Newsreader:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </head>
+  <body>
+    <header class="top">
+      <a class="brand" href="#verify"
+        ><svg
+          width="34"
+          height="34"
+          viewBox="0 0 34 34"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="3"
+          stroke-linecap="round"
+        >
+          <rect x="3" y="11" width="16" height="12" rx="6" />
+          <rect
+            x="15"
+            y="11"
+            width="16"
+            height="12"
+            rx="6"
+            stroke="#3340E8"
+          /></svg
+        >PUB CertChain</a
+      >
+      <nav id="nav">
+        <button data-v="verify" class="on">Verify</button
+        ><button data-v="staff">Staff</button
+        ><button data-v="student">Student</button
+        ><button data-v="audit">Audit trail</button>
+      </nav>
+    </header>
+    <main>
+      <section id="verify" class="view on">
+        <div class="hero">
+          <div>
+            <h1>Is this certificate real? Know in seconds.</h1>
+            <p class="lead">
+              Type the certificate ID, scan its QR code, or upload the PDF. No
+              account needed.
+            </p>
+            <form data-f="lookup">
+              <label for="cid">Certificate ID</label>
+              <div class="row">
+                <input
+                  id="cid"
+                  name="cid"
+                  placeholder="PUB-2026-0001"
+                  autocomplete="off"
+                  required
+                /><button class="btn">Check ID</button>
+              </div>
+            </form>
+            <div class="tools">
+              <label class="btn ghost sm" for="pdfin">Upload PDF</label
+              ><input id="pdfin" type="file" accept="application/pdf" hidden />
+              <button class="btn ghost sm" data-a="scan" type="button">
+                Scan QR with camera
+              </button>
+            </div>
+            <video id="cam" hidden playsinline muted></video>
+            <div id="result" aria-live="polite"></div>
+          </div>
+          <div>
+            <div class="paper" id="lab">
+              <p class="small" id="labkind"></p>
+              <p class="small">This is to certify that</p>
+              <input id="f-name" aria-label="Student name" spellcheck="false" />
+              <p class="small">has completed</p>
+              <input id="f-program" aria-label="Program" spellcheck="false" />
+              <p class="small">
+                with a CGPA of
+                <input
+                  id="f-cgpa"
+                  class="mini"
+                  aria-label="CGPA"
+                  spellcheck="false"
+                />
+              </p>
+              <p class="idline" id="labid"></p>
+              <svg class="seal" viewBox="0 0 100 100" aria-hidden="true">
+                <g class="half l"><path d="M50 6A44 44 0 0 0 50 94Z" /></g>
+                <g class="half r"><path d="M50 6A44 44 0 0 1 50 94Z" /></g>
+                <path class="tick" d="M31 52l13 13 25-29" />
+              </svg>
+            </div>
+            <div class="hashes">
+              <div>
+                <b>Fingerprint on the chain</b><code id="h-chain"></code>
+              </div>
+              <div>
+                <b>Fingerprint of this page now</b><code id="h-now"></code>
+              </div>
+            </div>
+            <p class="verdict" id="labmsg"></p>
+            <p class="hint">
+              Try it: change one letter on the certificate above.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="staff" class="view"></section>
+      <section id="student" class="view"></section>
+      <section id="audit" class="view"></section>
+    </main>
+    <dialog id="dlg"></dialog>
+    <div id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
